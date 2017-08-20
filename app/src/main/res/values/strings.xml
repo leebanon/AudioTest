@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">AudioTest</string>
+    <string name="hello"></string>
+    <string name="startRecord">开始录音</string>
+    <string name="stopRecord">停止录音</string>
+    <string name="startPlay">开始播放</string>
+    <string name="stopPlay">结束播放</string>
+</resources>
