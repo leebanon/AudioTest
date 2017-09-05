@@ -1,5 +1,6 @@
 package com.jikexueyuan.audiotest;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.media.MediaRecorder;
 import android.os.Environment;
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Button stopRecord;
     private Button stopPlay;
+    private Button wavRecord;
 
     //语音操作对象  
     private MediaPlayer mPlayer = null;
@@ -52,6 +54,16 @@ public class MainActivity extends AppCompatActivity {
         stopPlay = (Button)findViewById(R.id.stopPlay);
         stopPlay.setText(R.string.stopPlay);
         stopPlay.setOnClickListener(new stopPlayListener());
+
+        //跳转到wav录制Activity
+        wavRecord = (Button)findViewById(R.id.wavRecord);
+        wavRecord.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,SecondActivity.class);
+                startActivity(intent);
+            }
+        });
 
         //设置sdcard的路径  
         FileName = Environment.getExternalStorageDirectory().getAbsolutePath();

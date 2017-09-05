@@ -22,5 +22,10 @@
         <Button
                 android:id="@+id/stopPlay"
                 android:layout_width="fill_parent"
+                android:layout_height="wrap_content"/>
+            <Button
+                android:id="@+id/wavRecord"
+                android:layout_width="fill_parent"
+                android:text="WAV"
                 android:layout_height="wrap_content"/>  
     </LinearLayout>
